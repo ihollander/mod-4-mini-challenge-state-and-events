@@ -3,6 +3,21 @@ import StarRating from './StarRating'
 
 class SpiceItem extends React.Component {
 
+  state = {
+    filledHeart: false
+  }
+
+  toggleHeart = evt => {
+    const callback = prevState => {
+      return {
+        filledHeart: !prevState.filledHeart
+      }
+    }
+
+    this.setState(callback)
+  }
+
+
 
   render() {
     const { image, title, description, notes, rating } = this.props.spice
@@ -11,9 +26,9 @@ class SpiceItem extends React.Component {
         <img src={image} alt={title} />
         <div className="details">
           <button className="favorite">
-            <span role="img" aria-label="heart">
+            <span role="img" aria-label="heart" onClick={ this.toggleHeart }>
               {/* TODO: find a way to toggle this value when the button is clicked!  */}
-              {true ? "🤍" : "♡"}
+              {this.state.filledHeart ? "🤍" : "♡"}
             </span>
           </button>
           <h2>{title}</h2>
