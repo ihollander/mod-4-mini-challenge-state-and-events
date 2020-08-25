@@ -29,9 +29,9 @@ We're going to continue working on our Spice Store and we'll be adding some new 
 
 Here are the deliverables you'll be building out:
 
-- [ ] When a user clicks the heart icon on a spice, it should change between a filled heart (🤍) to indicate this spice is in the user's list of favorites, and an outlined heart (♡) to indicate this spice is no longer in the user's list of favorites.
-- [ ] When a user types in the search bar, the list of spices displayed should be filtered to match based on the text in the input field and the *notes* property of the spice. For example, if the user types 'warm', the list should show Allspice, Cardamom Pods, and Garam Masala.
-- [ ] When the user clicks the checkbox next to '4 Star Only', the list of spices should be filtered to only display the spices with a *rating* of 4 or higher.
+<!-- - [ ] When a user clicks the heart icon on a spice, it should change between a filled heart (🤍) to indicate this spice is in the user's list of favorites, and an outlined heart (♡) to indicate this spice is no longer in the user's list of favorites. -->
+<!-- - [ ] When a user types in the search bar, the list of spices displayed should be filtered to match based on the text in the input field and the *notes* property of the spice. For example, if the user types 'warm', the list should show Allspice, Cardamom Pods, and Garam Masala. -->
+<!-- - [ ] When the user clicks the checkbox next to '4 Star Only', the list of spices should be filtered to only display the spices with a *rating* of 4 or higher. -->
 
 ## Tips
 You will need to add state to some components in order to build out these deliverables. Think about *which* components state belongs in - refer to [Thinking in React](https://reactjs.org/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live) if you're not sure!
