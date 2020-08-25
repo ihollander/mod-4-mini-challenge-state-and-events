@@ -3,6 +3,12 @@ import StarRating from './StarRating'
 
 class SpiceItem extends React.Component {
 
+  state = {
+    toggle : false
+  }
+
+
+  toggleHeart = () => this.setState({toggle : !this.state.toggle})
 
   render() {
     const { image, title, description, notes, rating } = this.props.spice
@@ -10,10 +16,10 @@ class SpiceItem extends React.Component {
       <div className="spice-item card">
         <img src={image} alt={title} />
         <div className="details">
-          <button className="favorite">
+          <button onClick={this.toggleHeart} className="favorite">
             <span role="img" aria-label="heart">
               {/* TODO: find a way to toggle this value when the button is clicked!  */}
-              {true ? "🤍" : "♡"}
+              {this.state.toggle ? "🤍" : "♡"}
             </span>
           </button>
           <h2>{title}</h2>
