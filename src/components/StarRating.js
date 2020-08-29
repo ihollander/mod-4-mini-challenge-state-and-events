@@ -1,6 +1,7 @@
 import React from 'react'
 
 const StarRating = props => {
+  
   const widthPct = `${props.percentage * 100}%`
   return (
     <div className="star-rating">
