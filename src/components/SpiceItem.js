@@ -3,6 +3,17 @@ import StarRating from './StarRating'
 
 class SpiceItem extends React.Component {
 
+  state = {
+    likes: false
+  }
+
+  handleLikeClick = () => {
+    this.setState(prevState => {
+      return {
+        likes: !prevState.likes
+      }
+    })
+  }
 
   render() {
     const { image, title, description, notes, rating } = this.props.spice
@@ -11,9 +22,9 @@ class SpiceItem extends React.Component {
         <img src={image} alt={title} />
         <div className="details">
           <button className="favorite">
-            <span role="img" aria-label="heart">
+            <span onClick={this.handleLikeClick} role="img" aria-label="heart">
               {/* TODO: find a way to toggle this value when the button is clicked!  */}
-              {true ? "🤍" : "♡"}
+              {this.state.likes ? "🤍" : "♡"}
             </span>
           </button>
           <h2>{title}</h2>
